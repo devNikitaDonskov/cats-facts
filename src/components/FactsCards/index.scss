@@ -1,0 +1,67 @@
+@import '../../assets/styles/styles.scss';
+
+.facts-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid $tan;
+  display:  flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 10px 20px;
+  max-width: 40vh;
+  min-width: 40vh;
+  height: auto;
+  background-color: $light-brown;
+  margin: 0.5rem;
+  &__title {
+    
+  }
+  &__text {
+    color: #0d0c0a;
+    margin-bottom: 70px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+  }
+}
+
+.card-button {
+  border-radius: 20px;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  &--like {
+    color: $white;
+    background-color: $blue;
+    margin-right: 10px;
+  } 
+  &--dislike {
+    color: $white;
+    background-color: $red;
+    transform: rotate(180deg);
+  } 
+  &--active {
+    background-color: $light-gray;
+    &:hover {
+      cursor: default;
+      opacity: 1;
+    }
+  }
+}

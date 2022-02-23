@@ -1,0 +1,121 @@
+@import '../../assets/styles/styles.scss';
+
+.app {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: $blue-green;
+    padding: 0 2rem;
+  }
+  &__counter {
+    position: fixed;
+    display: flex;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    &--likes {
+      padding: 10px 20px;
+      background-color: $blue;
+    }
+    &--dislikes {
+      padding: 10px 20px;
+      background-color: $red;
+    }
+  }
+  &__main {
+    background-color: $lightsea-green;
+    min-height: 100vh;
+  }
+  &__footer {
+
+  }
+}
+.header-title {
+  color: $white;
+}
+
+.header-input {
+ /* display: flex;
+  align-content: center;
+  //margin: auto;*/
+  padding: 0 30px;
+  &__input {
+    margin-right: 5px;
+    height: 30px;
+    width: 40px;
+    background-color: $white;
+    border-radius: 3px;
+    border: none;
+  }
+  &__button {
+    height: 34px;
+    color: $white;
+    background-color: $dark-brown;
+    border-radius: 3px;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+  }
+}
+
+.likes-counter {
+  font-size: 14;
+  line-height: 1px;
+  &--likes {
+    color: $white;
+  }
+  &--dislikes {
+    color: $white;
+  }
+}
+
+.like-icon {
+  width: 20px;
+  height: 20px;
+  &--like {
+    padding-left: 2px;
+    margin-right: 10px;
+  } 
+  &--dislike {
+    padding-right: 2px;
+    margin-bottom: -8px;
+    transform: rotate(180deg);
+  } 
+}
+
+@media screen and (max-width: 720px) {
+  .header-title {
+    padding-top: 40px;
+  }
+
+  .header-input {
+    padding-top: 40px;
+  }
+
+  .app__counter {
+    width: 100%;
+    &--likes {
+      width: 50%; 
+    }
+    &--dislikes {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 517px) {
+  .header-input {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 457px) {
+  .header-input {
+    padding: 0px 0px 20px 0px;
+  }
+}
