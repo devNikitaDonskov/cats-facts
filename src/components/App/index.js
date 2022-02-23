@@ -1,5 +1,5 @@
 import {ReactComponent as Like} from './../../assets/icons/like.svg';
-import React, { useState, useEffect, setState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
 import FactsCards from '../FactsCards';
 
@@ -35,7 +35,6 @@ function App() {
   function onLikePress (factIndex) {
     let likesArr = likes
     if(!likesArr.includes(factIndex)){
-      let likesValue = likesCount
       let dislikesValue = dislikesCount
       let dislikesArr = dislikes
       likesArr.push(factIndex)
@@ -55,7 +54,6 @@ function App() {
     let dislikesArr = dislikes
     if(!dislikesArr.includes(factIndex)){
       let likesValue = likesCount
-      let dislikesValue = dislikesCount
       let likesArr = likes
       dislikesArr.push(factIndex)
       setDislikesCount(dislikesArr.length)
